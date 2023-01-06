@@ -1,0 +1,125 @@
+﻿@page
+@model Bigfoot.Pages.Team.IndexModel
+<link href="@Url.Content("~/css/index.css")" rel="stylesheet" type="text/css" />
+@section head{
+    <style type="text/css">
+        body {
+            width: auto;
+           /* min-height: auto;*/
+            margin: 0;
+            /* The image used */
+            background-image: url("/images/Pine_BG_01.jpg");
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+}
+
+  
+@{
+    ViewData["Title"] = "Bigfoot Database";
+}
+
+
+<h1 style="font-family:Good; text-shadow:1px 1px antiquewhite;">Bigfoot Database</h1>
+
+<p>
+    <a asp-page="Create" class="btn">New Sighting</a>
+</p>
+
+    <div class="row">
+        
+        <div class="text-white col-sm-7" style="margin-right:-5%;">
+            <form>
+                <p class="text-white col-sm-6">
+                    Search State: <input type="text" asp-for="SearchString" />
+                </p>           
+                <p class="text-white col-sm-6">
+                    Filter: <input type="text" name="filterString" value="@Model.CurrentFilter" />
+                    <input type="submit" value="Search" class="btn2" />
+                </p> 
+            </form>
+        </div>
+        <div class="text-white col-sm-5" style=" margin-top:-6.8%; max-height:190px;">
+            <p class="text-white col-sm-12">
+                <img src="/images/BF_TreeLine_02.png" alt="BigfootTrees"/>   
+            </p>
+        </div>
+    </div>
+<table class="table text-white table-bordered table-dark table-hover flex-lg-column">
+    <thead>
+        <tr class="text-center">
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.StateSort"> 
+                @Html.DisplayNameFor(model => model.Sightings[0].State)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.YearSort"> 
+                @Html.DisplayNameFor(model => model.Sightings[0].Year)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.MonthSort"> 
+                @Html.DisplayNameFor(model => model.Sightings[0].Month)
+                </a>
+            </th>
+             <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.ClassSort"> 
+                @Html.DisplayNameFor(model => model.Sightings[0].Class)
+                </a>
+            </th>
+            <th style="color:antiquewhite;">
+                @Html.DisplayNameFor(model => model.Sightings[0].Occurence)
+            </th>
+
+@*            <th>
+                @Html.DisplayNameFor(model => model.Sightings[0].PhotoPath)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Sightings) {
+        <tr class="text-center">
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Month)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td >
+                @Html.DisplayFor(modelItem => item.Occurence)
+            </td>
+
+@*            <td>
+                @Html.DisplayFor(modelItem => item.Photo)
+            </td>*@
+                <td style="width: 300px">
+                    <a asp-page="./Edit" class="btn2" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" class="btn2" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" class="btn2" asp-route-id="@item.ID">Delete</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+    <div style="padding-left:10px; padding-right:10px; padding-top:5px; background-color:darkslategray; color:white; margin-bottom:1%; border:2px solid black;">
+        <H6 style="text-decoration:underline;">Class Definitions</H6>
+        <p style="font-size:14px;font-weight:400;"> Class A : reports involve clear sightings in circumstances where misinterpretation or misidentification of other animals can be ruled out with greater confidence. For example, there are several footprint cases that are very well documented. These are considered Class A reports, because misidentification of common animals can be confidently ruled out, thus the potential for misinterpretation is very low.</p>
+        <p style="font-size:14px;font-weight:400;"> Class B : Incidents where a possible sasquatch was observed at a great distance or in poor lighting conditions and incidents in any other circumstance that did not afford a clear view of the subject are considered Class B reports.</p>
+        <p style="font-size:14px;font-weight:400; "> Class C : Most second-hand reports, and any third-hand reports, or stories with an untraceable sources, are considered Class C, because of the high potential for inaccuracy.</p>
+    </div>

@@ -1,0 +1,93 @@
+﻿@page
+@model Bigfoot.Pages.Team.MichiganModel
+@section head{
+    <link href="@Url.Content("~/css/index.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            background-image: url("/images/Michigan_BG_01.jpg");
+            width: auto;
+            /* min-height: auto;*/
+            margin: 0;
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+}
+@{
+    ViewData["Title"] = "Michigan";
+}
+
+<div class="row" style="margin-top:2%;">
+   
+    <h1 class="text-center" style="color:antiquewhite; text-shadow:2px 2px black; margin-left:1%; width:56.5%; font-family: 'Good';">Michigan Sightings</h1>
+    <div class="col-sm-7 text-light" style="margin-top:-1%;">
+        <dl style="background-color:darkslategray; margin-top:2%; padding-left:10px; padding-right:10px; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+            <dt class="col-sm-2 ">
+                <span style="font-size:20px; text-decoration:underline;">Reports</span>
+            </dt>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">February 2022, Mackinac County</span> (Class B) - Wood knocks at night in UP: Big Manistique Lake, east side of Seney Refuge
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">January 2021, Menominee County</span> (Class B) - Coyote hunters watch upright figure at night in woodline with glowing yellowish eyes outside Faithorn
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">August 2020, Sanilac County</span> (Class A) - Daylight sighting along Lake Huron north of Lexington
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">June 2019, Mason County</span> (Class B) - Early morning vocalizations heard by fishermen near Walhalla
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">May 18, Delta County</span> (Class B) - Possible vocalization outside Rock MI near western edge of Hiawatha National Forest
+            </dd>
+        </dl>
+        
+        <dl style="background-color:darkslategray; margin-top:2%; padding-left:10px; padding-right:10px; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+            <dt class="col-sm-6">
+                <span style="font-size:20px; text-decoration:underline; padding-bottom:5px;">Top 5 Counties for Sightings</span>
+            </dt>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #1 Delta: 11
+                </span><br />
+                Most Recent: May 2018, (Class B) - Possible vocalization outside Rock MI near western edge of Hiawatha National Forest
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #2 Oscoda: 10
+                </span><br />
+                Most Recent: May 2010 (Class B) - Possible daylight sighting by a motorist near Mio.
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #3 Marquette: 9
+                </span><br />
+                Most Recent: April 2008 (Class A) - Large, unusual footprints observed in deep snow near Bass Lake
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #4 Ogemaw: 8
+                </span><br /> 
+                September 2016 (Class B) - Motorist has a possible daylight sighting just north of South Branch
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #5 Schoolcraft: 8
+                </span><br />
+                August 2010 (Class A) - Close encounter by a hunter tracking his dogs at night outside the Seney National Wildlife Refuge
+            </dd>
+        </dl>
+    </div>
+    <div class="col-sm-5" style="margin-top:-3%;">
+        <img src="/images/Michigan.png" alt="foot big" height="734" style="background-color: rgba(47,79,70,0.7) ; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+    </div>
+   
+</div>
+<div>
+    <a asp-page="/Team/UnitedStates">Back to Map</a> - <a asp-page="./Index">Back to List</a>
+</div>

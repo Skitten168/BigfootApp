@@ -1,0 +1,93 @@
+﻿@page
+@model Bigfoot.Pages.Team.OhioModel
+@section head{
+    <link href="@Url.Content("~/css/index.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            background-image: url("/images/Ohio_BG_01.jpg");
+            width: auto;
+            /* min-height: auto;*/
+            margin: 0;
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+}
+    @{
+    ViewData["Title"] = "Ohio";
+}
+
+<div class="row" style="margin-top:2%;">
+
+    <h1 class="text-center" style="color:antiquewhite; text-shadow:2px 2px black; margin-left:1%; width:56.5%; font-family: 'Good';">Ohio Sightings</h1>
+    <div class="col-sm-7 text-light" style="margin-top:-1%;">
+        <dl style="background-color:darkslategray; margin-top:2%; padding-left:10px; padding-right:10px; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+            <dt class="col-sm-2 ">
+                <span style="font-size:20px; text-decoration:underline;">Reports</span>
+            </dt>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">July 2021, Jefferson County</span> (Class B) - Missing chickens lead to discovery of large footprints by chicken coop near Bloomingdale
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">July 2021, Mahoning County</span> (Class B) - Couple returning home spots a bigfoot crossing their driveway outside Columbiana
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">June 2021, Guernsey County</span> (Class B) - Salt Fork boaters hear a loud, deep howl ("Ohio Howl") from adjacent shore.
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">June 2021, Ashland County</span> (Class B) - Possible sighting in Mohican State Park near Loudonville
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">June 2021, Ashland County</span> (Class B) - Long distance daylight sighting by farm owner 5 miles south of Ashland
+            </dd>
+        </dl>
+
+        <dl style="background-color:darkslategray; margin-top:2%; padding-left:10px; padding-right:10px; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+            <dt class="col-sm-6">
+                <span style="font-size:20px; text-decoration:underline; padding-bottom:5px;">Top 5 Counties for Sightings</span>
+            </dt>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #1 Portage: 19
+                </span><br />
+                Most Recent: August 2011, (Class B) - Possible nightime encounter while fishing at Mogadore Reservoir
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #2 Guernsey: 16 
+                </span><br />
+                Most Recent: June 2021 (Class B) - Salt Fork boaters hear a loud, deep howl ("Ohio Howl") from adjacent shore.
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #3 Columbiana: 13
+                </span><br />
+                Most Recent: October 2015 (Class A) - Road crossing seen by mother and daughter travelling at dusk near Salem
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #4 Summit: 12
+                </span><br />
+                Most Recent: May 2019 (Class A) - 4:45am road crossing sighting of a Sasquatch 18 miles south of Cleveland
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #5 Harrison: 11
+                </span><br />
+                Most Recent: November 2012 (Class A) - Family reports several encounters over several months on the outskirts of Scio
+            </dd>
+        </dl>
+    </div>
+    <div class="col-sm-5" style="margin-top:-3%;">
+        <img src="/images/Ohio.png" alt="foot big" height="734" style="background-color: rgba(47,79,70,0.7) ; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+    </div>
+    <div style="margin-top:-1%; margin-bottom:1%;">
+        <a asp-page="/Team/UnitedStates">Back to Map</a> - <a asp-page="./Index">Back to List</a>
+    </div>
+</div>
+

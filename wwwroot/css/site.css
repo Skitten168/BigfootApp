@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Swabby';
+    src: url('../fonts/CaptainSwabbyNF.ttf');
+}
+
+@font-face {
+    font-family: 'Feet';
+    src: url('../fonts/FTSCanblDemo.TTF');
+}
+
+@font-face {
+    font-family: 'Good';
+    src: url('../fonts/Good Choice.ttf');
+}
+
+@font-face {
+    font-family: 'Bee';
+    src: url('../fonts/Bee Leave.ttf');
+}
+
+@font-face {
+    font-family: 'Grunge';
+    src: url('../fonts/Grunge Poster.ttf');
+}
+
+@font-face {
+    font-family: 'Saj';
+    src: url('../fonts/Sajola-RegPersonalUse.otf');
+}
+
+@font-face {
+    font-family: 'Slenco';
+    src: url('../fonts/Slenco-Black demo.otf');
+}
+
+@font-face {
+    font-family: 'Morg';
+    src: url('../fonts/MORGANA PERSONAL USE.ttf');
+}
+
+@font-face {
+    font-family: 'Globe';
+    src: url('../fonts/THE GLOBE PERSONAL USE.ttf');
+}
+
+@font-face {
+    font-family: 'Goose';
+    src: url('../fonts/Cocogoose-Narrow-Regular-trial.ttf');
+}
+
+@font-face {
+    font-family: 'Speed';
+    src: url('../fonts/SFSpeedwaystar.ttf');
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.imageThumbnail{
+    height: 200px;
+    width: auto;
+}

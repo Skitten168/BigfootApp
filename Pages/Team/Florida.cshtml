@@ -1,0 +1,93 @@
+﻿@page
+@model Bigfoot.Pages.Team.FloridaModel
+@section head{
+    <link href="@Url.Content("~/css/index.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            background-image: url("/images/Florida_BG_01.jpg");
+            width: auto;
+            /* min-height: auto;*/
+            margin: 0;
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+}
+    @{
+    ViewData["Title"] = "Florida";
+}
+
+<div class="row" style="margin-top:2%;">
+
+    <h1 class="text-center" style="color:antiquewhite; text-shadow:2px 2px black; margin-left:1%; width:56.5%; font-family: 'Good';">Florida Sightings</h1>
+    <div class="col-sm-7 text-light" style="margin-top:-1%;">
+        <dl style="background-color:darkslategray; margin-top:2%; padding-left:10px; padding-right:10px; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+            <dt class="col-sm-2 ">
+                <span style="font-size:20px; text-decoration:underline;">Reports</span>
+            </dt>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">March 2022, Okaloosa County</span> (Class B) - Likely sasquatch knocks heard in Yellow River Water Management area NW of Crestview
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">August 2021, Martin County</span> (Class A) - Motorist sighting of a Sasquatch along Hwy 1 north of Jupiter
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">July 2021, Volusia County</span> (Class B) - Possible 1AM sighting by commuter on forest road 17 miles west of Daytona Beach
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">June 2021, Orange County</span> (Class B) - Couple hears loud wood knocks and responses in large nature reserve 20 miles north of Orlando
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">March 2021, Sarasota County</span> (Class A) - Grandfather and Granddaughter See Figure in Englewood Yard
+            </dd>
+        </dl>
+
+        <dl style="background-color:darkslategray; margin-top:2%; padding-left:10px; padding-right:10px; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+            <dt class="col-sm-6">
+                <span style="font-size:20px; text-decoration:underline; padding-bottom:5px;">Top 5 Counties for Sightings</span>
+            </dt>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #1 Collier: 21
+                </span><br />
+                Most Recent: November 2012, (Class A) - Daylight sighting of a man-like ape while target shooting in the Big Cypress National Preserve
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #2 Marion: 19
+                </span><br />
+                Most Recent: August 2017 (Class A) - Multiple witnesses, daylight sighting, Hopkins Prairie, Ocala NF, next to Florida Trail
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #3 Lake: 18
+                </span><br />
+                Most Recent: November 2015 (Class A) - Tall hairy figure is seen by the roadside on SR-19 near Altoona
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #4 Polk: 18
+                </span><br />
+                August 2017 (Class B) - Large brown figure seen standing in water near Lake Wales
+            </dd>
+            <dd class="col-sm-12">
+                <span style="font-size:17px; font-weight:600;">
+                    #5 Clay: 16
+                </span><br />
+                November 2011 (Class B) - Fishermen have possible late afternoon encounter on Black Creek
+            </dd>
+        </dl>
+    </div>
+    <div class="col-sm-5" style="margin-top:-3%;">
+        <img src="/images/Florida.png" alt="foot big" height="734" style="background-color: rgba(47,79,70,0.7) ; box-shadow:5px 5px rgba(0,0,0,0.5); border:solid 2px black;">
+    </div>
+
+</div>
+<div>
+    <a asp-page="/Team/UnitedStates">Back to Map</a> - <a asp-page="/Index">Back to List</a>
+</div>

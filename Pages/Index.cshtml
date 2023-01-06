@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@section head{
+    <style type="text/css">
+        body {
+            background-image: url("/images/Pine_BG_03.jpg");
+            background-repeat:no-repeat;
+            /*background-size:contain;*/
+            background-position:center;
+            background-color:black;
+            width: auto;
+            /*height: auto;*/
+            margin: 0;
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+}
+@{
+    ViewData["Title"] = "Home page";
+}
+<div>
+    <div class="text-center">
+        <p style="margin-bottom:-4%; margin-top:-3%; font-family:'Feet'; font-size:150px; color:black; text-shadow: 1px 1px white">BIGFOOT</p>
+        <h4 style="font-family:Slenco; text-shadow:1px 1px white;">Tracking the legendary beast</h4>
+        <div style="padding-top:2%;">
+            <img src="/images/bigfoot_art_01.png" alt="foot big" style="max-width:758px; min-width:189px; max-height:565px; min-width:141PX;">
+        </div>
+    </div>
+</div>

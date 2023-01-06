@@ -1,0 +1,68 @@
+﻿@page
+@model Bigfoot.Pages.Team.DeleteModel
+@section head{
+    <link href="@Url.Content("~/css/index.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            width: auto;
+            /* min-height: auto;*/
+            margin: 0;
+            /* The image used */
+            background-image: url("/images/Delete_BG_01.jpg");
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+}
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 style="font-family:Good; color:white; text-shadow:3px 3px black;">Delete</h1>
+
+<h3 style="color:white; text-shadow:2px 2px black;">Are you sure you want to delete this report?</h3>
+<div>
+    <hr style="background-color:white; opacity:1;" />
+    <div style="background-color:darkslategray; padding:10px; border:solid 1px red; color:white;">
+        <h4>@Html.DisplayFor(model => model.Sightings.State) |  @Html.DisplayFor(model => model.Sightings.Year) | @Html.DisplayFor(model => model.Sightings.Month) | @Html.DisplayNameFor(model => model.Sightings.Class) @Html.DisplayFor(model => model.Sightings.Class)</h4>
+        <hr style="background-color:white;" />
+
+        <dl class="row">
+            <div class="col-sm-9">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Sightings.Occurence)
+                </dt>
+                <dd class="col-sm-12">
+                    @Html.TextAreaFor(model => model.Sightings.Occurence,new{style = "min-height:100px; width:100%; border:1px solid red;", @class = "form-control bg-dark text-white", disabled="disabled"})
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Sightings.Description)
+                </dt>
+                <dd class="col-sm-12">
+                    @Html.TextAreaFor(model => model.Sightings.Description,new{style = "min-height:200px; width:100%; border:1px solid red;", @class = "form-control bg-dark text-white", disabled="disabled"})
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Sightings.Location)
+                </dt>
+                <dd class="col-sm-12">
+                    @Html.TextAreaFor(model => model.Sightings.Location,new{style = "min-height:60px; width:100%; border:1px solid red;", @class = "form-control bg-dark text-white", disabled="disabled"})
+                </dd>
+            </div>
+        </dl>
+        <form method="post">
+            <input type="hidden" asp-for="Sightings.ID" />
+            <input type="submit" value="Delete" class="btn3 btn-danger" />
+        </form>
+       
+    </div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+@section Scripts{
+
+}
